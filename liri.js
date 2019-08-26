@@ -3,6 +3,7 @@ var Spotify = require('node-spotify-api');
 var axios = require("axios");
 var fs = require("fs");
 var keys = require("./keys.js");
+var moment = require('moment');
 var bandsintown = require('bandsintown');
 var spotify = new Spotify(keys.spotify);
 var commandToBeExecuted = process.argv[2];
@@ -16,7 +17,7 @@ function  concertSearch()
             
           console.log("Venue name :"+" " +response.data[0].venue.name);
             console.log("Venue location:"+ " "+response.data[0].venue.city);
-            console.log("Venue date :"+ " "+response.data[0].datetime);
+            console.log("Venue date :"+ " "+moment(response.data[0].date).format("MMM Do YYYY"));
         }
       );
 }
