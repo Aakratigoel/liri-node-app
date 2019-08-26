@@ -27,3 +27,6 @@ This app works for the following 4 commands :
 4. do-what-it-says: do-what-it-says command will read the default command and value associated with it from the file random.txt and executes that default command .
 
 Also, as the commands are executed, command and its value is stored or logged into a file name called log.txt, so as to keep track of the commands that have been executed.
+
+
+ 
