@@ -153,17 +153,35 @@ else if(commandToBeExecuted === "do-what-it-says")
       
       });
 }
+if(!userInput)
+{
+  fs.appendFile("log.txt",commandToBeExecuted+ "\n", function(err) {
 
-fs.appendFile("log.txt",commandToBeExecuted+" "+userInput + "\n", function(err) {
+    // If an error was experienced we will log it.
+    if (err) {
+      console.log(err);
+    }
+  
+    // If no error is experienced, we'll log the phrase "Content Added" to our node console.
+    else {
+      console.log("Content Added!");
+    }
+  
+  });
+}
+else{
+  fs.appendFile("log.txt",commandToBeExecuted+ " "+userInput+"\n", function(err) {
 
-  // If an error was experienced we will log it.
-  if (err) {
-    console.log(err);
-  }
+    // If an error was experienced we will log it.
+    if (err) {
+      console.log(err);
+    }
+  
+    // If no error is experienced, we'll log the phrase "Content Added" to our node console.
+    else {
+      console.log("Content Added!");
+    }
+  
+  });
+}
 
-  // If no error is experienced, we'll log the phrase "Content Added" to our node console.
-  else {
-    console.log("Content Added!");
-  }
-
-});
