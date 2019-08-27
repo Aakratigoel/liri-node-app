@@ -29,4 +29,5 @@ This app works for the following 4 commands :
 Also, as the commands are executed, command and its value is stored or logged into a file name called log.txt, so as to keep track of the commands that have been executed.
 
 
- 
+ Link to the screenshots of the app execution:
+ https://github.com/Aakratigoel/liri-node-app/tree/master/LIRI_commands_screenshots
